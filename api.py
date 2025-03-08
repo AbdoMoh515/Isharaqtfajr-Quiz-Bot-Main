@@ -3,7 +3,7 @@ import logging
 import csv
 import os
 import tempfile
-import PyMuPDF 
+import fitz  # PyMuPDF
 import re
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
@@ -102,7 +102,7 @@ async def send_quizzes(file_path, chat_id):
 def extract_text_from_pdf(pdf_path):
     """ استخراج النصوص من ملف PDF """
     text = ""
-    with PyMuPDF.open(pdf_path) as doc:
+    with fitz.open(pdf_path) as doc:
         for page in doc:
             text += page.get_text("text") + "\n"
     return text
