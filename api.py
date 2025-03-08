@@ -3,7 +3,7 @@ import logging
 import csv
 import os
 import tempfile
-import fitz  # مكتبة PyMuPDF لاستخراج النصوص من PDF
+import fitz 
 import re
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
