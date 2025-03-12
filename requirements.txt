@@ -60,4 +60,4 @@ tzdata==2025.1
 urllib3==2.3.0
 uvicorn==0.34.0
 yarl==1.18.3
-fitz
+fitz==0.0.1.dev2
